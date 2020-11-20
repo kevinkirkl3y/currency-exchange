@@ -7,12 +7,18 @@ import Conversion from './services/conversionService.js';
 function clearFields() {
   $('showErrors').text ("");
 }
+// function completeConversion (){
+//   this.destCode = destCode
+//   this.baseCode = baseCode
+//   this.fundsConverting = fundsConverting
+//   console.log(conversion);
+//   this.conversion = (`conversion.conversion_rates.${this.destCode}`)
+//   this.conversionFormula = this.fundsConverting * this.conversion;
+// }
 
 function showConversion (conversion) {
-  
-  console.log(conversion);
   if(conversion.conversion_rates) {
-    $('.showConversion').html(`<p> Your conversion rate for  from is ${conversion.conversion_rates.EUR}`)
+    $('.showConversion').append(`<p> Your conversion rate for  from is ${conversion.conversion_rates.EUR} and your funds are worth `)
   } else {
     $('.showErrors').html(`<p> Your query returned an error: ${conversion}`)
   }
@@ -22,12 +28,14 @@ function showConversion (conversion) {
 $(document).ready(function() {
   
   $('#convert').click(function() {
-    let base = "USD";
+    let baseCode = "USD";
+    let destCode = "EUR";
+    let fundsConverting = 100;
     clearFields();
     (async function() {
-      const conversionAPI = await Conversion.getConversion(base);
-      showConversion(conversionAPI);
-      console.log(conversionAPI);
+      const conversion = await Conversion.getConversion(baseCode);
+      showConversion(conversion, baseCode, destCode, fundsConverting);
+      console.log(conversion);
     })();
   });
 });
