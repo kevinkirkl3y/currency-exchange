@@ -8,12 +8,9 @@ function clearFields() {
   $('showErrors').text ("");
 }
 
-function showConversion (conversion) {
+function showConversion (conversion, destCode, baseCode, inputValue) {
   if(conversion.conversion_rates) {
-
-    let destCode = "EUR";
-    $('.showConversion').append(`<p> Your conversion rate for  from is ${conversion.conversion_rates[destCode]} and your funds are worth  `)
-    // console.log(conversionRate);
+    $('.showConversion').append(`<p> Your conversion rate for ${destCode} from  ${baseCode} is ${conversion.conversion_rates[destCode]} and your funds are worth ${inputValue * conversion.conversion_rates[destCode]} `)
   } else {
     $('.showErrors').html(`<p> Your query returned an error: ${conversion}`)
   }
@@ -24,11 +21,13 @@ $(document).ready(function() {
   
   $('#convert').click(function() {
     const baseCode = "USD";
+    const destCode = "AED"
+    const inputValue = 100;
     
     clearFields();
     (async function() {
       const conversion = await Conversion.getConversion(baseCode);
-      showConversion(conversion);
+      showConversion(conversion, destCode, baseCode, inputValue);
      
       console.log(conversion);
     })();
