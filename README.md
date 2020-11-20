@@ -27,6 +27,9 @@
 | Create API Key and contain it securely | API_KEY | .env | 
 | conversionService() | | |
 | Create an API call that brings back the required information | conversionService(USD) | 200 ok |
+| If API call results in an error program will return a message stating what the error is. | Invalid key | Your API call returned an error: Invalid Key |
+| Takes user inputValue and converts from their base monetary code to their destination's monetary code. | 100 USD | 367.21 AED |
+
 
 
 

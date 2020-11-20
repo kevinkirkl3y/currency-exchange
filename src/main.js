@@ -14,7 +14,6 @@ function showConversion (conversion, destCode, baseCode, inputValue) {
   } else {
     $('.showErrors').html(`<p> Your query returned an error: ${conversion}`)
   }
-
 }
 
 $(document).ready(function() {
