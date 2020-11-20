@@ -5,14 +5,16 @@ import './css/styles.css';
 import Conversion from './services/conversionService.js';
 
 function clearFields() {
-  $('showErrors1').text ("");
+  $('showErrors').text ("");
 }
 
 function showConversion (conversion) {
-  let dest = "EUR";
+  
   console.log(conversion);
   if(conversion.conversion_rates) {
-    $('showConversion').html(`<p> Your conversion rate for ${dest} from ${base} is ${conversion.conversion_rates.EUR}`)
+    $('.showConversion').html(`<p> Your conversion rate for  from is ${conversion.conversion_rates.EUR}`)
+  } else {
+    $('.showErrors').html(`<p> Your query returned an error: ${conversion}`)
   }
 
 }
