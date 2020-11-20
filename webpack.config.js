@@ -16,7 +16,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'TODO',
+      title: 'currency-exchage',
       template: './src/index.html',
       inject: 'body'
     }),

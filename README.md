@@ -1,6 +1,6 @@
-# Title TODO
+# Title currency-exchage
 
-#### "Objective and Date TODO"
+#### "Objective and Date currency-exchage"
 
 #### by _**Kevin Kirkley**_
 
@@ -26,16 +26,16 @@ Software Requirements
 2. A code editor such as VSCode in order to view or edit codebase. 
 
 Open by downloading:
-1. Download the [repository](TODO) onto your computer by clicking the 'clone or download button'.
+1. Download the [repository](currency-exchage) onto your computer by clicking the 'clone or download button'.
 2. Double click the index.html to open it within your browser.
 
 Open with Bash/GitBash:
-1. Clone this repository onto your computer: 'git clone TODO'
+1. Clone this repository onto your computer: 'git clone currency-exchage'
 2. Navigate into the 'MrRoboger' directory and open in VSCode or preferred text editor using 'code .' in your terminal.
 3. Open index.html in Google Chrome or your preferred browser. 
 
 View my live website here: 
-[TODO](kevinkirkl3y.github.io/)
+[currency-exchage](kevinkirkl3y.github.io/)
 
 ## Known Bugs
 
