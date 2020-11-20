@@ -6,12 +6,27 @@
 
 ## Description
 
- 
+<!---
+ GamePlan:
+- API Requires two parameters: API Key and Base Currency
+- User will need to input their base currency which will be input into the call url. (Select Bar with Supported Base code with value displayed in "USD" format)
+- User will need to input the currency code of monetary system they want to convert to (Select Bar with Monetary System and value displayed in "AUD" format.)
+- User will need to input Numerical value of money they want to convert. (form num).
+- Input value multiplied by conversion to generate value in desired monetary system
+- access conversion values by:
+  let data = JSON.Parse(response)
+  data.conversion_rates.${currency-code}
+
+--->
+
 
 ## Specifications
 
 | Describe: | Input | Output |
 | :-----------------------------------| :------------- | :------------- |
+| Create API Key and contain it securely | API_KEY | .env | 
+| conversionService() | | |
+| Create an API call that brings back the required information | conversionService(USD) | 200 ok |
 
 
 
