@@ -6,7 +6,34 @@
   <title>currency-exchage</title>
 </head>
 <body>
-  <button id="convert">Convert</button>
+  <h1 class="jumbotron">Currency Exchange</h1>
+  <div class="card">
+    <div class="card-title">
+      <h3>What do you want to exchange?</h3>
+      <div class="card-body">
+        <form class="input">
+          <input type="num" class="inputValue" placeholder="$ Amount">
+          <select name="currency" id="baseCode">
+            <option value="USD">United States Dollar</option>
+            <option value="EUR">Euro</option>
+            <option value="CHF">Swiss Franc</option>
+            <option value="DKK">Danish Krone</option>
+            <option value="CNY">Chinese Renminbi</option>
+          </select>
+          <h3>Currency of your Destination:</h3>
+          <select name="currency" id="destCode">
+            <option value="USD">United States Dollar</option>
+            <option value="EUR">Euro</option>
+            <option value="CHF">Swiss Franc</option>
+            <option value="DKK">Danish Krone</option>
+            <option value="CNY">Chinese Renminbi</option>
+          </select>
+        </form>
+
+      </div>
+    </div>
+    <button id="convert">Convert</button>
+  </div>
   <div class="showConversion"></div>
   <div class="showErrors"></div>
   
