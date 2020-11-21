@@ -5,19 +5,8 @@
 #### by _**Kevin Kirkley**_
 
 ## Description
+This program allows users to convert their funds to and from US Dollars, Euros, Swiss Francs, Danish Krone and  Chinese Renminbi. It employs a call to the ExchangeRate API which provide up-to-date currency exchange information. This information is then used to calculate the value of user's funds in the aforementioned monetary systems. 
 
-<!---
- GamePlan:
-- API Requires two parameters: API Key and Base Currency
-- User will need to input their base currency which will be input into the call url. (Select Bar with Supported Base code with value displayed in "USD" format)
-- User will need to input the currency code of monetary system they want to convert to (Select Bar with Monetary System and value displayed in "AUD" format.)
-- User will need to input Numerical value of money they want to convert. (form num).
-- Input value multiplied by conversion to generate value in desired monetary system
-- access conversion values by:
-  let data = JSON.Parse(response)
-  data.conversion_rates.${currency-code}
-
---->
 
 
 ## Specifications
@@ -29,11 +18,6 @@
 | Create an API call that brings back the required information | conversionService(USD) | 200 ok |
 | If API call results in an error program will return a message stating what the error is. | Invalid key | Your API call returned an error: Invalid Key |
 | Takes user inputValue and converts from their base monetary code to their destination's monetary code. | 100 USD | 367.21 AED |
-
-
-
-
-
 
 
 
@@ -63,7 +47,7 @@ View my live website here:
 [currency-exchage](kevinkirkl3y.github.io/)
 
 ## Known Bugs
-
+No known bugs.
 
 
 
