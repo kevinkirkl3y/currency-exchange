@@ -10,13 +10,13 @@ function clearFields() {
 }
 
 function showConversion (conversion, destCode, baseCode, inputValue) {
-  if(baseCode != "USD" || baseCode != "EUR" || baseCode != "CHF" || baseCode != "DKK" || baseCode != "CNY" || destCode != "USD" || destCode != "EUR" || destCode != "CHF" || destCode != "DKK" || destCode != "CNY" ) {
-    $('.showCurrencyError').text(`<p>Sorry, unfortunately that currency is not supported at this time.</p>`);
+  if(baseCode === "OTR" || destCode === "OTR") {
+    $('.showCurrencyErrors').html(`<p>Sorry, unfortunately other currencies are not supported at this time.</p>`);
   } 
   if(conversion.conversion_rates) {
     $('.showConversion').append(`<p> The conversion rate for ${baseCode} to  ${destCode} is ${conversion.conversion_rates[destCode]} and your funds are worth ${(inputValue * conversion.conversion_rates[destCode]).toFixed(2)} ${destCode} `)
   } else {
-    $('.showErrors').html(`<p> Your query returned an error: ${conversion}`)
+    $('.showErrors').html(`<p> Your query returned an error: ${conversion.conversion_rates}`)
   }
 }
 
