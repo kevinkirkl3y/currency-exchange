@@ -6,7 +6,8 @@ import Conversion from './services/conversionService.js';
 
 function clearFields() {
   $('.showErrors').text ("");
-  $('.showConversion').text("")
+  $('.showConversion').text("");
+  $('.showCurrencyErrors').text("");
 }
 
 function showConversion (conversion, destCode, baseCode, inputValue) {
