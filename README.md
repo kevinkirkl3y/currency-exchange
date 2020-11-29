@@ -5,7 +5,7 @@
 #### by _**Kevin Kirkley**_
 
 ## Description
-This program allows users to convert their funds to and from US Dollars, Euros, Swiss Francs, Danish Krone and  Chinese Renminbi. It employs a call to the ExchangeRate API which provide up-to-date currency exchange information. This information is then used to calculate the value of user's funds in the aforementioned monetary systems. 
+This program allows users to convert their funds to and from any monetary code supported by the ExchangeRate API, which provides up-to-date currency exchange information. This information is then used to calculate the value of user's funds in the aforementioned monetary systems.  
 
 
 
